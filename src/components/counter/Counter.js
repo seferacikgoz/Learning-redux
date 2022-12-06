@@ -4,7 +4,8 @@ import { increment, clear, decrement } from "../../redux/actions/counterActions"
 
 const Counter = () => {
   const dispatch = useDispatch()
-  const counter = useSelector((state) => state.counter) 
+  /* const counter = useSelector((state) => state.counter)  */
+  const counter = useSelector((state) => state.count.counter) 
   /* const {counter} = useSelector((state) => state) */
   return (
     <div className="app">
