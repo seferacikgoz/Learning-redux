@@ -26,7 +26,7 @@ import todoReducer from "./reducers/todoReducer"
 
 const rootReducer = combineReducers({
   count:  counterReducer,
-   todo: todoReducer,
+  todo: todoReducer,
 })
 
 export const store = createStore(rootReducer);
