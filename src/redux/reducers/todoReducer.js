@@ -1,4 +1,4 @@
-import { ADD_TODO, CLEAR_TODO, DELETE_TODO } from "../types/todoTypes";
+import { ADD_TODO, CLEAR_TODO, DELETE_TODO, TOGGLE_TODO } from "../types/todoTypes";
 
 const initialState = {
     todoList:[{id:new Date().getTime(), text:"Work Hard", completed:true}],
@@ -19,8 +19,6 @@ const todoReducer = (state = initialState, { type, payload }) => {
 
     case TOGGLE_TODO:
     return {};
-
-
 
     case CLEAR_TODO:
       return initialState;
