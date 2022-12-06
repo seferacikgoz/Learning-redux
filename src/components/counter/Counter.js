@@ -1,5 +1,6 @@
 import "./Counter.css";
 import { useDispatch, useSelector } from "react-redux";
+import { increment } from "../../redux/actions/counterActions";
 
 const Counter = () => {
   const dispatch = useDispatch()
@@ -10,10 +11,10 @@ const Counter = () => {
       <h2 className="counter-header">Counter With Redux</h2>
       <h1>{counter}</h1>
       <div>
-        <button className="counter-button positive" onClick={() => dispatch({type:"INCREMENT"})}>increase</button>
+        <button className="counter-button positive" onClick={() => dispatch(increment(username))}>increase</button>
 
         <button className="counter-button zero" onClick={() => dispatch({type:"CLEAR"})}>reset</button>
-        
+
         <button className="counter-button negative"  onClick={() => dispatch({type:"DECREMENT"})}>decrease</button>
       </div>
     </div>
