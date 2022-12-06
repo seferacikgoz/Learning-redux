@@ -1,16 +1,17 @@
-/* 
+import { CLEAR, DECREMENT, INCREMENT } from "../types/counterType";
+
 const initialState = {
     counter :0, 
 }
 
-const reducer = (state = initialState,action) => {
+const counterReducer = (state = initialState,action) => {
     switch (action.type) {
-        case "INCREMENT":            
+        case INCREMENT:            
             return {counter: state.counter + 1}
 
-        case "DECREMENT":
+        case DECREMENT:
             return {counter: state.counter - 1}
-        case "CLEAR":
+        case CLEAR:
             return initialState;
     
         default:
@@ -18,4 +19,4 @@ const reducer = (state = initialState,action) => {
     }
 }
 
-export default reducer; */
+export default counterReducer;
