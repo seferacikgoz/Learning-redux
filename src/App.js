@@ -11,9 +11,9 @@ function App() {
   return (
     <div className="app">
       <Provider store={store}>
-      <Counter />
+      <Counter />      
+      <Todo />
       </Provider>
-      {/* <Todo /> */}
     </div>
   );
 }
